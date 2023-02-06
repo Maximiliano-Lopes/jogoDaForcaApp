@@ -227,11 +227,6 @@ function jogoForca(letra) {
   />`
 
   areaDeEscolhas.innerHTML = inputs
-
-
-
-  } else {
-    document.querySelector(`input[value="${letra}"]`).disabled = true;
   }
 
   let numeroDeLetras = randomWord.length;
@@ -278,7 +273,7 @@ function verificarResposta(tracosJogo, letra) {
   } else {
     if (erros == -1) {
      bonecoEnforcado = `
-            <span id="spanChances">Changes: ${chances}</span>
+            <span id="spanChances">Chances: ${chances}</span>
                 <div id="forca">
                     
                     <div id='bonecoEnforcado' style="font-size: 5vw;">
@@ -300,27 +295,27 @@ function verificarResposta(tracosJogo, letra) {
         var cabeca = document.getElementById("head")
         cabeca.classList.add("headOn")
         chances -= 1
-        spanChances.innerHTML = `Changes: ${chances}`
+        spanChances.innerHTML = `Chances: ${chances}`
     } else if (erros == 1) {
         var corpo = document.getElementById("bodyBoneco")
         corpo.classList.add("bodyOn")
-        spanChances.innerHTML = `Changes: ${chances-2}`
+        spanChances.innerHTML = `Chances: ${chances-2}`
     } else if (erros == 2) {
         var bracoDireito = document.getElementById("rightArm")
         bracoDireito.classList.add("rightArmOn")
-        spanChances.innerHTML = `Changes: ${chances-3}`
+        spanChances.innerHTML = `Chances: ${chances-3}`
     } else if (erros == 3) {
         var bracoEsq = document.getElementById("leftArm")
         bracoEsq.classList.add("leftArmOn")
-        spanChances.innerHTML = `Changes: ${chances-4}`
+        spanChances.innerHTML = `Chances: ${chances-4}`
     } else if (erros == 4) {
         var pernaEsq = document.getElementById("leftLeg")
         pernaEsq.classList.add("leftLegOn")
-        spanChances.innerHTML = `Changes: ${chances-5}`
+        spanChances.innerHTML = `Chances: ${chances-5}`
     } else if (erros == 5) {
         var pernaDir = document.getElementById("rightLeg")
         pernaDir.classList.add("rightLegOn")
-        spanChances.innerHTML = `Changes: última chance!!`
+        spanChances.innerHTML = `Chances: última chance!!`
     } else if (erros == 6) {
       alert("Poxa vida, você perdeu...\n A palavra era: "+ randomWord +"\nTente novamente!");
       reiniciarJogo(erros);
