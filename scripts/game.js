@@ -34,7 +34,7 @@ let letrasUsadas = [];
 var letra = "";
 
 async function buscaDados() {
-  const words = await fetch("../data/word.json").then((res) => res.json());
+  const words = await fetch("/data/word.json").then((res) => res.json());
 
   selectRamdomWord(words);
 }
